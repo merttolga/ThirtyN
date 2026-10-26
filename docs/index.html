@@ -165,6 +165,12 @@ h2.sec { font-family: var(--display); font-weight: 700; font-size: clamp(32px, 5
 
 footer { padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
 
+/* sabit WhatsApp düğmesi */
+.wa-float { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 300; display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px 12px 16px; background: #12803f; color: #fff; border-radius: 999px; text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 21px; line-height: 1; box-shadow: 0 6px 20px rgba(0, 0, 0, .5); opacity: 0; animation: appear .6s ease .3s forwards; touch-action: manipulation; }
+html.intro-on .wa-float { animation-delay: 2.9s; }
+.wa-float:hover { background: #0e6a34; }
+.wa-float svg { width: 24px; height: 24px; flex: none; }
+
 @media (max-width: 820px) {
   .names { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
   .names li { font-size: 24px; }
@@ -172,12 +178,14 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--m
   .terminals .term:last-child { grid-column: 1 / -1; }
   .contact { grid-template-columns: minmax(0, 1fr); }
   .cap h3 { font-size: 24px; }
+  footer { padding-bottom: 100px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .slide { transition: none; }
   html .reveal, html:not(.intro-on) .reveal { opacity: 1; animation: none; }
   html .brand-line { animation: none; }
+  .wa-float { opacity: 1; animation: none; }
 }
 </style>
 <script>
@@ -270,7 +278,7 @@ try { if (sessionStorage.getItem('tn_intro') !== '1' && !matchMedia('(prefers-re
           <p>Arıza, yeni pano veya otomasyon projesi için talebinizi iletin. Ekibimiz en kısa sürede size dönüş yapacaktır.</p>
           <div class="cta-row">
             <a class="cta" href="https://wa.me/905448335455?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp ile yazın</a>
-            <a class="cta alt" href="mailto:omnitechotomasyon@gmail.com?subject=Bilgi%20talebi">E-posta gönderin</a>
+            <a class="cta alt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=omnitechotomasyon%40gmail.com&amp;su=Bilgi%20talebi" target="_blank" rel="noopener">E-posta gönderin</a>
           </div>
         </div>
         <dl class="rows">
@@ -285,6 +293,11 @@ try { if (sessionStorage.getItem('tn_intro') !== '1' && !matchMedia('(prefers-re
   <footer>© 2026 OmniTech Automation &amp; Robotics. Tüm hakları saklıdır.</footer>
 </div>
 </div>
+
+<a class="wa-float" href="https://wa.me/905448335455?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
 
 <script>
 (function () {
