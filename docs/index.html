@@ -149,7 +149,7 @@ h2.sec { font-family: var(--display); font-weight: 700; font-size: clamp(32px, 5
 .rows div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); flex-wrap: wrap; }
 .rows div:last-child { border-bottom: 1px solid var(--line); }
 .rows dt { color: var(--muted); }
-.rows dd { margin: 0; font-weight: 500; text-align: right; }
+.rows dd { margin: 0; font-weight: 500; text-align: right; overflow-wrap: anywhere; }
 .rows dd a { text-decoration: none; }
 .rows dd a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .cta { display: inline-block; font-family: var(--display); font-weight: 700; font-size: 22px; padding: 12px 30px; background: var(--wire); color: #fff; text-decoration: none; border-radius: 4px; }
@@ -270,12 +270,12 @@ try { if (sessionStorage.getItem('tn_intro') !== '1' && !matchMedia('(prefers-re
           <p>Arıza, yeni pano veya otomasyon projesi için talebinizi iletin. Ekibimiz en kısa sürede size dönüş yapacaktır.</p>
           <div class="cta-row">
             <a class="cta" href="https://wa.me/905448335455?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp ile yazın</a>
-            <span class="cta alt off" aria-disabled="true">E-posta gönderin (yakında)</span>
+            <a class="cta alt" href="mailto:omnitechotomasyon@gmail.com?subject=Bilgi%20talebi">E-posta gönderin</a>
           </div>
         </div>
         <dl class="rows">
           <div><dt>Telefon</dt><dd><a href="tel:+905448335455">0544 833 54 55</a></dd></div>
-          <div><dt>E-posta</dt><dd>Yakında eklenecektir</dd></div>
+          <div><dt>E-posta</dt><dd><a href="mailto:omnitechotomasyon@gmail.com">omnitechotomasyon@gmail.com</a></dd></div>
           <div><dt>Adres</dt><dd>Karacaibrahim Mahallesi, Meşe Sokak No:1/A, Kırklareli/Merkez<br><a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Karacaibrahim+Mahallesi+Me%C5%9Fe+Sokak+No+1%2FA+K%C4%B1rklareli" target="_blank" rel="noopener">Google Haritalar'da aç</a></dd></div>
         </dl>
       </div>
